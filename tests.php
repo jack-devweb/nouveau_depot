@@ -12,8 +12,14 @@ require("ma_bibliotheque.php");
 // désactivées dans la configuration de PHP) et de stopper le script avec une
 // erreur au cas où une assertion n'est pas vraie.
 
+function assert_failed($file, $line, $expr) {
+    print "Assertion failed in $file on line $line\n";
+    exit(1);
+}
+
 assert_options(ASSERT_ACTIVE, true);
 assert_options(ASSERT_BAIL, true);
+assert_options(ASSERT_CALLBACK, 'assert_failed');
 
 
 // Fonction trouver_min

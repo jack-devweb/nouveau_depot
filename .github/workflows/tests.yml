@@ -1,0 +1,39 @@
+name: Tests de ma bibliothèque
+
+on: [push]
+
+jobs:
+  trouver_min:
+    runs-on: ubuntu-latest
+    container: php:7.4
+    steps:
+    - uses: actions/checkout@v3
+    - run: php -r "require('tests.php'); test_trouver_min();"
+
+  trouver_max:
+    runs-on: ubuntu-latest
+    container: php:7.4
+    steps:
+    - uses: actions/checkout@v3
+    - run: php -r "require('tests.php'); test_trouver_max();"
+
+  trouver_plus_proche_de_zero:
+    runs-on: ubuntu-latest
+    container: php:7.4
+    steps:
+    - uses: actions/checkout@v3
+    - run: php -r "require('tests.php'); test_trouver_plus_proche_de_zero();"
+
+  sans_nom:
+    runs-on: ubuntu-latest
+    container: php:7.4
+    steps:
+    - uses: actions/checkout@v3
+    - run: php -r "require('tests.php'); test_sans_nom();"
+
+  mysterieuse:
+    runs-on: ubuntu-latest
+    container: php:7.4
+    steps:
+    - uses: actions/checkout@v3
+    - run: php -r "require('tests.php'); test_mysterieuse();"
