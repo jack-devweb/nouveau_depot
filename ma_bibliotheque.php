@@ -1,27 +1,35 @@
 <?php
-// Fonction pour trouver la valeur minimale d'un tableau
-// TODO: Corriger l'erreur dans la fonction
-function trouver_min($tableau) {
-    $min = $tableau[0];
 
+function trouver_min($tableau) {
+    $min = PHP_INT_MAX;
     foreach ($tableau as $element) {
-        if ($min < $element) {
+        if ($min > $element) {
             $min = $element;
         }
     }
-
     return $min;
 }
 
-// Fonction pour trouver la valeur maximale d'un tableau
 function trouver_max($tableau) {
-    // TODO: Écrire le corps de la fonction
+    $max = PHP_INT_MIN;
+    foreach ($tableau as $element) {
+        if ($max < $element) {
+            $max = $element;
+        }
+    }
+    return $max;
 }
 
-// Fonction pour trouver la valeur la plus proche de zéro
 function trouver_plus_proche_de_zero($tableau) {
-    // TODO: Écrire le corps de la fonction
+    $min = PHP_INT_MAX;
+    $resultat = 0;
+    foreach ($tableau as $element) {
+        if (abs($element) < $min) {
+            $min = abs($element);
+            $resultat = $element;
+        }
+    }
+    return $resultat;
 }
 
-// TODO: Ajouter les fonctions manquantes
 ?>
