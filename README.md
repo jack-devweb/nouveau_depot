@@ -66,6 +66,7 @@ Il est à présent temps de coder les autres fonctions de la bibliothèque pour 
  6. On recommence tant que tout n’est pas développé.
 
 Si vous procédez ainsi, vous ferez de beaux commits atomiques. C’est-à-dire que chaque commit contiendra une nouvelle fonctionnalité complète. On pourra revenir sur n’importe quel commit plus tard et le projet sera à chaque fois dans un état fonctionnel.
+bonjour 
 
 
 ## Aller plus loin
